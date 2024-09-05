@@ -1,0 +1,170 @@
+/* Reset and basic styles */
+
+body, html {
+    cursor: url('chromehearts.png'), auto;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-wrap video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(10px);
+}
+
+.background-wrap .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Gradient overlay */
+}
+
+/* Overlay styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 3s ease;
+    cursor: pointer;
+    pointer-events: none; /* Disable pointer events on overlay */
+}
+
+.overlay a {
+    pointer-events: auto; /* Enable pointer events only for the 'Click to Enter' link */
+    color: white;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    transition: font-size 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.overlay a:hover {
+    font-size: 28px;
+}
+
+/* Content box styling */
+.content {
+    position: absolute;
+    top: 35%; /* Adjust vertical position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure content is above the background */
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust background opacity */
+    backdrop-filter: blur(1px); /* Adjust blur amount */
+    border-radius: 20px; /* Rounded corners */
+    border: 2px solid rgba(0, 0, 0, 0.3); /* Border to emphasize the box */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    box-shadow: 0 0 20px 10px rgba(41, 39, 39, 0.2);
+}
+
+.content img {
+    width: 360px;
+    height: 300px;
+    margin-right: -7px; /* Added px unit */
+    margin-left: -7px; /* Added px unit */
+    border-radius: 10px; /* Rounded image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Image shadow */
+    transition: transform 0.3s ease; /* Image zoom effect */
+}
+
+.content img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.content:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content-text {
+    color: rgba(255, 255, 255, 0.9); /* Adjust text opacity */
+}
+
+/* Social icons styling */
+.Socials {
+    margin-top: 20px; /* Add some space above the social icons */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.social-icons a {
+    color: rgba(255, 255, 255, 0.9); /* Adjust link color */
+    text-decoration: none;
+    margin: 0 10px; /* Add margin to create space between icons */
+    display: inline-block; /* Ensure each link is displayed as a block element */
+    line-height: 1; /* Ensure consistent line height */
+    pointer-events: auto; /* Enable pointer events for social icons */
+    font-size: 24px; /* Adjust icon size */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons a:hover {
+    color: #ffffff; /* Adjust link hover color */
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Mute button styling */
+.mute-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2; /* Ensure button is above content */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+
+.mute-button i {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Scale up mute button on hover */
+.mute-button:hover {
+    transform: scale(1.2);
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Footer background color */
+}

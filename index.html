@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/45fe0ad16c.js" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_TRACKING_ID"></script>
+    <script src="visitor.js" defer></script> <!-- Include the visitor tracking JavaScript file -->
+    <title>yeatk's shit</title>
+</head>
+<body>
+    <main>
+        <!-- Background Video -->
+        <div class="background-wrap">
+            <video id="backgroundVideo" loop>
+                <source src="3AM.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Click to Enter Overlay -->
+        <div class="overlay" id="overlay">
+            <a id="enterLink" href="#">Click to Enter</a>
+        </div>
+        
+        <!-- Content Box with @YEATK -->
+        <div class="content">
+            <div class="content-header">
+                <h1 class="header"><i class="fab fa-web-awesome"></i> YEATK <i class="fab fa-web-awesome"></i></h1>
+                <img src="IMG_9745.gif">
+                <div class="visitor-count"><!--<i class="fas fa-eye"></i> <span id="visitorCount">Loading...</span> -->
+                </div>
+            </div>
+            <div class="content-text">
+                <div class="Socials">
+                    <p>Type shit</p>
+                    <div class="social-icons">
+                        <a href="https://discord.com/users/1081105824698597457" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.instagram.com/stresstower/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@stresstower" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mute Button -->
+        <div class="mute-button" onclick="toggleMute()">
+            <i id="volumeIcon" class="fas fa-volume-high"></i>
+        </div>
+
+        <!-- JavaScript for mute and background handling -->
+        <script>
+           // JavaScript for mute and background handling
+document.addEventListener("DOMContentLoaded", function() {
+    var overlay = document.getElementById('overlay');
+    var video = document.getElementById('backgroundVideo');
+    var audio = video; // Assuming audio is the same as video for simplicity
+
+    // Function to start background video and audio
+    function startBackground() {
+        overlay.style.opacity = '0'; // Fade out the overlay
+        setTimeout(function() {
+            overlay.style.display = 'none'; // Hide the overlay
+            video.play(); // Start playing the video
+        }, 500); // Faster delay for hiding overlay and starting video/audio
+    }
+
+    // Function to toggle mute/unmute
+    function toggleMute() {
+        if (!video.muted) {
+            video.muted = true;
+            audio.muted = true;
+            document.getElementById('volumeIcon').className = 'fas fa-volume-mute'; // Change to muted icon
+        } else {
+            video.muted = false;
+            audio.muted = false;
+            document.getElementById('volumeIcon').className = 'fas fa-volume-high'; // Change to volume high icon
+        }
+    }
+
+    // Add an event listener to the link
+    document.getElementById('enterLink').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+        startBackground(); // Call the function to start background
+    });
+
+    // Add click event listener to mute button
+    document.querySelector('.mute-button').addEventListener('click', function() {
+        toggleMute(); // Call toggleMute function on click
+    });
+});
+
+        </script>
+    </main>
+    <footer>Made By @yeatk / @042e (same person)</footer>
+</body>
+</html>
