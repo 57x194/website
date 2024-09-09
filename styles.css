@@ -1,5 +1,3 @@
-/* Reset and basic styles */
-
 body, html {
     cursor: url('chromehearts.png'), auto;
     height: 100%;
@@ -36,10 +34,9 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Gradient overlay */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
 }
 
-/* Overlay styling */
 .overlay {
     position: fixed;
     top: 0;
@@ -54,51 +51,50 @@ body, html {
     opacity: 1;
     transition: opacity 3s ease;
     cursor: pointer;
-    pointer-events: none; /* Disable pointer events on overlay */
+    pointer-events: none;
 }
 
 .overlay a {
-    pointer-events: auto; /* Enable pointer events only for the 'Click to Enter' link */
+    pointer-events: auto;
     color: white;
     font-size: 24px;
     font-family: 'Arial', sans-serif;
     transition: font-size 0.3s ease;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
 .overlay a:hover {
     font-size: 28px;
 }
 
-/* Content box styling */
 .content {
     position: absolute;
-    top: 35%; /* Adjust vertical position */
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1; /* Ensure content is above the background */
+    z-index: 1;
     text-align: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Adjust background opacity */
-    backdrop-filter: blur(1px); /* Adjust blur amount */
-    border-radius: 20px; /* Rounded corners */
-    border: 2px solid rgba(0, 0, 0, 0.3); /* Border to emphasize the box */
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
     box-shadow: 0 0 20px 10px rgba(41, 39, 39, 0.2);
 }
 
 .content img {
     width: 360px;
     height: 300px;
-    margin-right: -7px; /* Added px unit */
-    margin-left: -7px; /* Added px unit */
-    border-radius: 10px; /* Rounded image */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Image shadow */
-    transition: transform 0.3s ease; /* Image zoom effect */
+    margin-right: -7px;
+    margin-left: -7px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 .content img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.1);
 }
 
 .content:hover {
@@ -107,44 +103,42 @@ body, html {
 }
 
 .content-text {
-    color: rgba(255, 255, 255, 0.9); /* Adjust text opacity */
+    color: rgba(255, 255, 255, 0.9);
 }
 
-/* Social icons styling */
 .Socials {
-    margin-top: 20px; /* Add some space above the social icons */
+    margin-top: 20px;
 }
 
 .social-icons {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-icons a {
-    color: rgba(255, 255, 255, 0.9); /* Adjust link color */
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    margin: 0 10px; /* Add margin to create space between icons */
-    display: inline-block; /* Ensure each link is displayed as a block element */
-    line-height: 1; /* Ensure consistent line height */
-    pointer-events: auto; /* Enable pointer events for social icons */
-    font-size: 24px; /* Adjust icon size */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    margin: 0 10px;
+    display: inline-block;
+    line-height: 1;
+    pointer-events: auto;
+    font-size: 24px;
+    transition: transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ffffff; /* Adjust link hover color */
-    transform: scale(1.2); /* Scale up on hover */
+    color: #ffffff;
+    transform: scale(1.2);
 }
 
-/* Mute button styling */
 .mute-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
     cursor: pointer;
-    z-index: 2; /* Ensure button is above content */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+    z-index: 2;
+    transition: transform 0.3s ease-in-out;
 }
 
 .mute-button i {
@@ -152,12 +146,10 @@ body, html {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Scale up mute button on hover */
 .mute-button:hover {
     transform: scale(1.2);
 }
 
-/* Footer styling */
 footer {
     position: fixed;
     bottom: 0;
@@ -166,5 +158,5 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8); /* Footer background color */
+    background-color: rgba(0, 0, 0, 0.8);
 }
